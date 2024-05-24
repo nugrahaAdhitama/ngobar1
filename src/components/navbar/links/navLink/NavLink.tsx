@@ -5,7 +5,12 @@ import Link from "next/link";
 import styles from "./NavLink.module.css";
 import { usePathname } from "next/navigation";
 
-const NavLink = ({ item }) => {
+interface item {
+  name: string;
+  path: string;
+}
+
+const NavLink = ({ item }: { item: item }) => {
   const pathName = usePathname();
 
   return (
